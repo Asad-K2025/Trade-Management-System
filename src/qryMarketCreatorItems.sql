@@ -1,0 +1,4 @@
+SELECT tblMarketCreatorItems.MarketID, tblMarketCreatorItems.[Item ID], tblMarketCreatorItems.Category, tblMarketCreatorItems.[Sub Category], tblMarketCreatorItems.Colour, tblMarketCreatorItems.[Company/Manufacturer], tblMarketCreatorItems.Detail, tblMarketCreatorItems.Recommended_Price, tblMarketCreatorItems.Quantity, tblMarketCreatorItems.Type, Sum([Quantity]*[Recommended_Price]) AS Product_Total
+FROM tblMarketCreatorItems
+GROUP BY tblMarketCreatorItems.MarketID, tblMarketCreatorItems.[Item ID], tblMarketCreatorItems.Category, tblMarketCreatorItems.[Sub Category], tblMarketCreatorItems.Colour, tblMarketCreatorItems.[Company/Manufacturer], tblMarketCreatorItems.Detail, tblMarketCreatorItems.Recommended_Price, tblMarketCreatorItems.Quantity, tblMarketCreatorItems.Type
+HAVING (((tblMarketCreatorItems.MarketID)=[Forms]![frmMarketCreator]![NavigationSubform].[Form]![txtMundyID]));
