@@ -1,0 +1,1 @@
+These are a few of the main VBA forms and SQL queries extracted from the Access database to showcase code.
